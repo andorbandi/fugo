@@ -15,7 +15,7 @@ public class Storage {
         }
     }
 
-    public static void tryWriteToFile(String content) throws IOException {
+    private static void tryWriteToFile(String content) throws IOException {
         FileWriter fileWriter = new FileWriter("adat.txt");
         fileWriter.write(content);
         fileWriter.close();

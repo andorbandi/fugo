@@ -27,11 +27,22 @@ public class Sol {
 
         scanner.close();
         printTarget(targetList);
+        startWrite(targetList);
     }
 
     public static void printTarget(List<String> targetList) {
         for (int i = 0; i < targetList.size(); i++) {
             System.out.println(targetList.get(i));
         }
+    }
+
+    public static void startWrite(List<String> targetList) {
+        
+        StringBuilder stringBuilder = new StringBuilder();
+        for(String target : targetList) {
+            stringBuilder.append(target);
+            stringBuilder.append("\n");
+        }
+        Storage.writeToFile(stringBuilder.toString());
     }
 }
